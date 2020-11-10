@@ -1,0 +1,12 @@
+.mission_container {
+  min-height: 100vh;
+  background-color: powderblue;
+  border: 2px solid black;
+}
+
+/* @media screen and (min-width: 700px) {
+  .mission_container {
+    flex: 1 1 100vw;
+    flex-wrap: wrap;
+  }
+} */

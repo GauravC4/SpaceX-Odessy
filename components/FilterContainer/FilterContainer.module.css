@@ -1,0 +1,11 @@
+.filter_container {
+  background-color: peachpuff;
+  min-height: 90vh;
+  border: 2px solid black;
+}
+
+@media all and (min-width: 700px) {
+  .filter_container {
+    flex: 1;
+  }
+}

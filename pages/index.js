@@ -4,10 +4,10 @@ import ResultContainer from "../components/ResultContainer/ResultContainer";
 
 const Index = ({data}) => {
     return (
-        <>
+        <Layout>
             <FilterContainer />
             <ResultContainer data = {data} />
-        </>
+        </Layout>
     );
 }
 
@@ -16,9 +16,9 @@ export const getServerSideProps = async ctx => {
     const {query} = ctx;
     console.log(query);
     if(query.launch_year){
-        var api = `https://api.spaceXdata.com/v3/launches?limit=2&launch_year=${query.launch_year}`;
+        var api = `https://api.spaceXdata.com/v3/launches?limit=4&launch_year=${query.launch_year}`;
     }else{
-        var api = `https://api.spaceXdata.com/v3/launches?limit=2`;
+        var api = `https://api.spaceXdata.com/v3/launches?limit=4`;
     }
     const res = await fetch(api);
     const data = await res.json()

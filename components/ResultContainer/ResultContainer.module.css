@@ -1,0 +1,16 @@
+.result_container {
+}
+
+@media screen and (min-width: 700px) {
+  .result_container {
+    columns: 2;
+    flex: 2;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .result_container {
+    columns: 4;
+    flex: 4;
+  }
+}

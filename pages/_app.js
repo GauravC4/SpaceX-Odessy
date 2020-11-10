@@ -1,10 +1,11 @@
-import Layout from "../components/Layout/Layout";
+import '../styles.css';
 
 function MyApp({ Component, pageProps }) {
     return (
     <div>
-        <h1>WELCOME</h1>
+        <header>SpaceX Launch Programs</header>
         <Component {...pageProps} />
+        <footer>Developed By : Gaurav Chemburkar</footer>
     </div>
     );
   }
