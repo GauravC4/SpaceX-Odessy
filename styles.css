@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  --background-color: #d4d4d49e;
+}
+
 header {
   min-height: 10vh;
 }

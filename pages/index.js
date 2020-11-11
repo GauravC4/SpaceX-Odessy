@@ -16,9 +16,9 @@ export const getServerSideProps = async ctx => {
     const {query} = ctx;
     console.log(query);
     if(query.launch_year){
-        var api = `https://api.spaceXdata.com/v3/launches?limit=4&launch_year=${query.launch_year}`;
+        var api = `https://api.spaceXdata.com/v3/launches?limit=10&launch_year=${query.launch_year}`;
     }else{
-        var api = `https://api.spaceXdata.com/v3/launches?limit=4`;
+        var api = `https://api.spaceXdata.com/v3/launches?limit=10`;
     }
     const res = await fetch(api);
     const data = await res.json()
