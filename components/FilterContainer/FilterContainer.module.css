@@ -1,14 +1,19 @@
 .filter_container {
-  height: 90vh;
+  min-height: 90vh;
   background-color: white;
   border-radius: 0.5rem;
-  margin: 2rem 1rem;
+  margin: 0 1rem 1rem 1rem;
   padding: 1rem;
+}
+
+.label {
+  text-align: center;
+  font-size: 1.4rem;
 }
 
 @media all and (min-width: 700px) {
   .filter_container {
     flex: 1;
-    height: auto;
+    min-height: initial;
   }
 }

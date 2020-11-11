@@ -6,25 +6,51 @@
 .mission_card {
   background-color: white;
   border-radius: 0.5rem;
-  padding: 2rem;
+  padding: 1rem;
   position: absolute;
-  width: 90%;
-  height: 90%;
-  top: 5%;
-  left: 5%;
+  width: 95%;
+  height: 95%;
+  top: 0%;
+  left: 2%;
 }
 
 .mission_card_content {
+  padding: 0 1rem;
 }
 
 .mission_card img {
   width: 100%;
-  height: 50%;
+  height: 50vh;
   background-color: var(--background-color);
+}
+
+.mission_ids {
+  color: rgb(46, 56, 130);
+}
+
+.label {
+  color: rgb(46, 56, 130);
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 0.5rem 0;
+  font-style: italic;
 }
 
 @media all and (min-width: 700px) {
   .mission_container {
     height: 50vh;
+  }
+  .mission_card img {
+    height: 20vh;
+  }
+  .label {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+  }
+  .mission_ids {
+    font-size: 0.8rem;
+  }
+  .mission_card_content {
+    padding: 0 0.5rem;
   }
 }

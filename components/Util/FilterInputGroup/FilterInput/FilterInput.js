@@ -1,7 +1,16 @@
+import styles from './FilterInput.module.css';
+
 const filterInput = (props) => {
-    const color = props.isActive ? "green" : "red";
+    const buttonClasses = styles.btn + (props.isActive ? (" "+styles.active) : "");  
     return(
-        <button onClick={props.click} style={{backgroundColor: color}}>{props.label}</button>
+        <div className={styles.input_container}>
+            <button 
+                onClick={props.click} 
+                className={buttonClasses}
+            >
+                {props.label}
+            </button>
+        </div>
     );
 }
 

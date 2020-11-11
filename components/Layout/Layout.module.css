@@ -1,7 +1,4 @@
 .layout_container {
-  margin: 0 auto;
-  max-width: 1440px;
-  border: solid 2px black;
 }
 
 @media all and (min-width: 700px) {

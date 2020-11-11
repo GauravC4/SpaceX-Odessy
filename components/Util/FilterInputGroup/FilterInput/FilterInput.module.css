@@ -1,0 +1,19 @@
+.btn {
+  font-size: 1rem;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  background-color: rgb(197, 224, 155);
+}
+
+.active {
+  background-color: rgb(124, 186, 1);
+}
+
+.input_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

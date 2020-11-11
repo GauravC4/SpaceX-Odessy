@@ -1,5 +1,6 @@
 import FilterInput from './FilterInput/FilterInput';
 import {useState} from 'react';
+import styles from "./FilterInputGroup.module.css";
 
 const filterInputGroup = (props) => {
 
@@ -40,7 +41,7 @@ const filterInputGroup = (props) => {
         />
     );
 
-    return <div>{filterInputs}</div>;
+    return <div className={styles.filter_group}>{filterInputs}</div>;
 }
 
 export default filterInputGroup;

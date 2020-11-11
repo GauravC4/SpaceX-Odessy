@@ -26,21 +26,24 @@ const filterContainer = () => {
     return(
         <div className={styles.filter_container}>
             <h1>Filters</h1>
-            <h3>Launch year</h3>
+            <div className={styles.label}>Launch year</div>
+            <hr />
             <FilterInputGroup 
                 filters = {yearFilters}
                 onFilterSet = {onFilterSet}
                 onFilterClear = {onFilterClear}
                 filterType = {YEAR_FILTER}
             />
-            <h3>Successful Launch</h3>
+            <div className={styles.label}>Successful Launch</div>
+            <hr />
             <FilterInputGroup 
                 filters = {booleanFilters}
                 onFilterSet = {onFilterSet}
                 onFilterClear = {onFilterClear}
                 filterType = {LAUNCH_FILTER}
             />
-            <h3>Successful Land</h3>
+            <div className={styles.label}>Successful Land</div>
+            <hr />
             <FilterInputGroup 
                 filters = {booleanFilters}
                 onFilterSet = {onFilterSet}
