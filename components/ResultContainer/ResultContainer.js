@@ -2,8 +2,9 @@ import Mission from './Mission/Mission';
 import styles from './ResultContainer.module.css';
 
 const resultContainer = ({data}) => {
-    let missions = data.map(mission => 
+    const missions = data.map(mission => 
     <Mission 
+        key={mission.mission_name}
         name={mission.mission_name}
         flight_number={mission?.flight_number}
         mission_ids={mission?.mission_id || []}

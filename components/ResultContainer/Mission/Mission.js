@@ -9,7 +9,7 @@ const mission = (props) => {
                     <span>Mission Ids : </span>
                     <div>
                         {
-                            props.mission_ids.map(mission_id => <li>{mission_id}</li>)
+                            props.mission_ids.map(mission_id => <li key={mission_id}>{mission_id}</li>)
                         }                                            
                     </div>
                     <div>Launch Year : {props.launch_year}</div>

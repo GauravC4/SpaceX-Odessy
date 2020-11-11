@@ -7,5 +7,6 @@
 @media all and (min-width: 700px) {
   .layout_container {
     display: flex;
+    align-items: flex-start;
   }
 }

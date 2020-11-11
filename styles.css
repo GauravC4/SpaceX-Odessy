@@ -5,9 +5,12 @@
 }
 
 html {
-  --background-color: #d4d4d49e;
+  --background-color: #e7e7e7c5;
 }
 
+#app {
+  background-color: var(--background-color);
+}
 header {
   min-height: 10vh;
 }
