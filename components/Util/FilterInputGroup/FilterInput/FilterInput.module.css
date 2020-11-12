@@ -6,6 +6,7 @@
   cursor: pointer;
   border-radius: 0.5rem;
   background-color: rgb(197, 224, 155);
+  text-transform: capitalize;
 }
 
 .active {
