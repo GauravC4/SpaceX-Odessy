@@ -1,14 +1,18 @@
-import Link from 'next/link';
 import styles from './FilterContainer.module.css';
 import FilterInputGroup from '../Util/FilterInputGroup/FilterInputGroup';
+import { useRouter } from 'next/router'
+import { useState } from 'react';
 
 const filterContainer = () => {
-    const booleanFilters = [{label: "True", value: true}, {label: "False", value: false}];
-    const LAUNCH_FILTER = "LAUNCH";
-    const LAND_FILTER = "LAND";
-    const YEAR_FILTER = "YEAR";
+    const booleanFilters = [{label: "true", value: true}, {label: "false", value: false}];
+    const LAUNCH_FILTER = "launch_success";
+    const LAND_FILTER = "land_success";
+    const YEAR_FILTER = "launch_year";
     const START_YEAR = 2006;
     const CURR_YEAR = new Date().getFullYear();
+    const router = useRouter();
+
+    const [query, setQuery] = useState({});
 
     let yearFilters = [];
     for(let i = START_YEAR; i <= CURR_YEAR; i++){
@@ -17,10 +21,26 @@ const filterContainer = () => {
 
     const onFilterSet = (name, filterType) => { 
         console.log(`${filterType} filter set with ${name}.`);
+        let newQuery = {...query};
+        newQuery[filterType] = name;
+        setQuery(newQuery);
+        updateRoute(newQuery);
     }
 
     const onFilterClear = (filterType) => { 
         console.log(`${filterType} filter cleared.`);
+        let newQuery = {...query};
+        delete newQuery[filterType];        
+        setQuery(newQuery);
+        updateRoute(newQuery);
+    }
+
+    const updateRoute = (query) => {
+        console.log("query obj", query);
+        router.replace({
+            pathname: "/",
+            query: query
+        });
     }
 
     return(

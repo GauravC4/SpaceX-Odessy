@@ -3,6 +3,16 @@
   grid-template-columns: 1fr;
 }
 
+.error {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  background-color: rgb(228, 0, 95);
+  color: white;
+  text-align: center;
+}
+
 @media all and (min-width: 700px) {
   .result_container {
     flex: 2;

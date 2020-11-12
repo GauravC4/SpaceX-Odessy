@@ -2,6 +2,14 @@ import Mission from './Mission/Mission';
 import styles from './ResultContainer.module.css';
 
 const resultContainer = ({data}) => {
+    if(!data || data.length === 0){
+        return (
+            <div className={styles.result_container}>
+                <p className={styles.error}>No data found !</p>
+            </div>
+        );
+    }
+
     const missions = data.map(mission => 
     <Mission 
         key={mission.mission_name}

@@ -15,8 +15,8 @@ const mission = (props) => {
                         }                                            
                     </div>
                     <Info label="Launch Year" value={props.launch_year}/>
-                    <Info label="Successful Launch" value={props.launch_success ? "Yes" : "False"}/>
-                    <Info label="Successful Landing" value={props.land_success ? "Yes" : "False"}/>                  
+                    <Info label="Successful Launch" value={props.launch_success}/>
+                    <Info label="Successful Landing" value={props.land_success}/>                  
                 </div>
             </div>
         </div>
