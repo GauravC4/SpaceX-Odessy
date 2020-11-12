@@ -31,6 +31,10 @@ footer {
   padding: 1rem 0;
 }
 
+ul {
+  margin-left: 1rem;
+}
+
 @media all and (min-width: 700px) {
   footer {
     font-size: 1.4rem;
