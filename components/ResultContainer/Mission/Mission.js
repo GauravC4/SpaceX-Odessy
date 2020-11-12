@@ -10,9 +10,11 @@ const mission = (props) => {
                     <div className={styles.label}>{`${props.name} #${props.flight_number}`}</div>
                     <Info label="Mission Ids" value=""/>
                     <div className={styles.mission_ids}>
+                        <ul>
                         {
                             props.mission_ids.map(mission_id => <li key={mission_id}>{mission_id}</li>)
-                        }                                            
+                        }
+                        </ul>                                            
                     </div>
                     <Info label="Launch Year" value={props.launch_year}/>
                     <Info label="Successful Launch" value={props.launch_success}/>
