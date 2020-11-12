@@ -43,10 +43,8 @@ export const getServerSideProps = async ctx => {
     // Fetch data from external API
     const {query} = ctx;
     const apiUrl = getApiUrl(query);
-    console.log("api", apiUrl);
     const res = await fetch(apiUrl);
     const data = extractData(await res.json());
-    ///console.log("data", data);
     // Pass data to the page via props
     return { props: { data } }
 }

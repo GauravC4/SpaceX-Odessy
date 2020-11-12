@@ -20,7 +20,6 @@ const filterContainer = () => {
     } 
 
     const onFilterSet = (name, filterType) => { 
-        console.log(`${filterType} filter set with ${name}.`);
         let newQuery = {...query};
         newQuery[filterType] = name;
         setQuery(newQuery);
@@ -28,7 +27,6 @@ const filterContainer = () => {
     }
 
     const onFilterClear = (filterType) => { 
-        console.log(`${filterType} filter cleared.`);
         let newQuery = {...query};
         delete newQuery[filterType];        
         setQuery(newQuery);
@@ -36,7 +34,6 @@ const filterContainer = () => {
     }
 
     const updateRoute = (query) => {
-        console.log("query obj", query);
         router.replace({
             pathname: "/",
             query: query
@@ -70,7 +67,6 @@ const filterContainer = () => {
                 onFilterClear = {onFilterClear}
                 filterType = {LAND_FILTER}
             />
-
         </div>
     );
 }

@@ -1,5 +1,4 @@
 export const getApiUrl = (query) => {
-    console.log("getapi query", query);
     const BASE_URL = "https://api.spaceXdata.com/v3/launches?limit=100";
     if(!query) return BASE_URL;
 
